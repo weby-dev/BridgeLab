@@ -1,0 +1,15 @@
+/* Q6 Responsive CSS Cheat Sheet using Grid
+   - 2-3 columns on large screens, stacked below 700px
+*/
+*{box-sizing:border-box}
+body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;margin:0;padding:2rem;background:#fafafa}
+.cheatsheet{max-width:1100px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.item{background:white;padding:1rem;border-radius:8px;transition:transform .18s ease, box-shadow .18s ease}
+.item:hover{transform:translateY(-6px);box-shadow:0 10px 20px rgba(0,0,0,.06)}
+
+@media (max-width:700px){
+  /* stacked rows where heading acts as key */
+  .grid{grid-template-columns:1fr}
+  .item{display:block}
+}

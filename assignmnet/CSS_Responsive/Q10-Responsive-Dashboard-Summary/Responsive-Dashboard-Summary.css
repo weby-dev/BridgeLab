@@ -1,0 +1,22 @@
+/* Q10 Responsive Dashboard using CSS Grid
+   - Header, sidebar, main grid layout
+   - On hover cards scale up with shadow
+   - Below 750px sidebar moves to top and content stacks
+*/
+*{box-sizing:border-box}
+body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;margin:0;padding:0;background:#f6f7fb}
+.dashboard{display:grid;grid-template-columns:220px 1fr;grid-template-rows:64px 1fr;grid-template-areas:"sidebar header" "sidebar main";min-height:100vh}
+.dash-header{grid-area:header;background:#fff;padding:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+.sidebar{grid-area:sidebar;background:#fff;padding:1rem;border-right:1px solid rgba(0,0,0,.04)}
+.main-content{grid-area:main;padding:1.5rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.card{background:#fff;padding:1rem;border-radius:8px;transition:transform .18s ease,box-shadow .18s ease;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card:hover{transform:scale(1.03);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+
+@keyframes loadIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card{animation:loadIn .4s ease}
+
+@media (max-width:750px){
+  .dashboard{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"header" "sidebar" "main"}
+  .sidebar{border-right:none;border-top:1px solid rgba(0,0,0,.04)}
+}
