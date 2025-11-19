@@ -1,0 +1,8 @@
+:root{
+  /* Override Bootstrap theme variables */
+  --bs-primary: #3b82f6; /* custom primary */
+  --bs-font-sans-serif: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+body{ font-family: var(--bs-font-sans-serif); }
+.themed-brand{ color: var(--bs-primary); }
+.themed-card{ border-left: .5rem solid var(--bs-primary); }

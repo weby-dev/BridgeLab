@@ -1,0 +1,3 @@
+/* Q8 pricing hover effects and transition */
+.card { transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-6px); }
