@@ -1,3 +1,0 @@
-/* Q3 — hover shadow + transition for product cards */
-.product-card { transition: transform .18s ease, box-shadow .18s ease; }
-.product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
